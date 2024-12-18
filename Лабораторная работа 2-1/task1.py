@@ -55,6 +55,9 @@ class Vehicle:
         >>> car = Vehicle("Toyota", "Camry", 2020)
         >>> car.drive(100.0)
         """
+        
+        if distance <= 0:
+            raise ValueError("Расстояние должно быть положительным числом.")        
         ...
 
 
@@ -112,6 +115,9 @@ class Wardrobe:
         >>> wardrobe = Wardrobe("Дерево", 200.0, 100.0)
         >>> wardrobe.store_item("Платье")
         """
+
+        if not item:
+            raise ValueError("Название вещи не может быть пустым.")
         ...
 
 
@@ -175,6 +181,9 @@ class Group:
         >>> group = Group("Спортсмены", 10, "Тренировки")
         >>> group.change_purpose("Соревнования")
         """
+
+        if not new_purpose:
+            raise ValueError("Название цели не может быть пустым.")
         ...
 
 
